@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,45 +14,43 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #000;
-
-
 }
 
 .hero-section {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #ba6f84,  #c21798, #626262);
+    background: linear-gradient(135deg, #ba6f84, #c21798, #626262);
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .logo-container {
     position: absolute;
     top: 20px;
-    z-index: 3; 
+    z-index: 3;
 }
 
 .logo-container img {
-    width: 150px; 
+    width: 120px;
 }
 
 .content {
     text-align: center;
     max-width: 800px;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     line-height: 1.6;
-    color: rgba(255, 253, 253, 0.8); 
+    color: rgba(255, 253, 253, 0.8);
 }
 
 .hero-section::before {
@@ -61,23 +60,23 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-
 .browser-frame {
     position: relative;
-    width: 100%;
+    width: 90%;
     max-width: 700px;
-    background-color: rgba(180, 255, 180, 0.1); 
-    border: 2px solid  #e24d97; 
+    background-color: rgba(180, 255, 180, 0.1);
+    border: 2px solid #e24d97;
     border-radius: 15px;
     padding: 50px;
-    margin-left: 40px;
+    margin: 40px auto;
     z-index: 3;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .window-buttons {
     position: absolute;
     top: 10px;
@@ -105,8 +104,6 @@ p {
     background-color: #00ca4e;
 }
 
-
-
 .icon-container {
     display: flex;
     justify-content: center;
@@ -118,9 +115,10 @@ p {
 }
 
 .icon-container img {
-    width: 50px; 
+    width: 50px;
     margin: 0 10px;
 }
+
 .arrow {
     position: absolute;
     top: 50%;
@@ -135,8 +133,40 @@ p {
 .arrow-right {
     right: 20px;
 }
+
 .carousel-content {
     width: 100%;
     height: 100%;
     display: flex;
 }
+
+
+@media (max-width: 480px) {
+    .logo-container img {
+        width: 100px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .browser-frame {
+        padding: 20px;
+        width: 100%; /* Full width on mobile */
+    }
+
+    .window-buttons {
+        top: 5px;
+        left: 10px;
+        gap: 8px;
+    }
+
+    .arrow {
+        font-size: 1.2em;
+    }
+
+    .icon-container img {
+        width: 30px;
+    }
+}
+
